@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list view</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<h3>查看{{ model_name }}</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        {% for item in  head_list %}
+                            <th>
+                                {{ item }}
+                            </th>
+                        {% endfor %}
+
+                    </tr>
+                </thead>
+                <tbody>
+                {% for new_data in  new_data_list %}
+                    <tr>
+                        {% for item in new_data %}
+                            <td>{{ item }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
